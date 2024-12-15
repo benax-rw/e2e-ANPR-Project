@@ -1,0 +1,7 @@
+# File: dataset.yaml
+train: ../data_processing/dataset/images/train  # path to the folder with training images
+val: ../data_processing/dataset/images/val      # path to the folder with validation images
+
+# Classes
+nc: 3  # number of classes
+names: ['RAG320P', 'RAH213T', 'RAH593C']

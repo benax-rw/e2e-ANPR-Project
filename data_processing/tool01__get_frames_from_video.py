@@ -1,6 +1,7 @@
 import cv2
 import os
 import argparse
+import time
 
 # Set up the argument parser
 parser = argparse.ArgumentParser(description="Extract frames from a video file.")
@@ -31,7 +32,6 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))
 frame_interval = fps // 6
 
 frame_count = 0
-saved_count = 0
 
 # Loop through the video and capture frames at regular intervals
 while True:
@@ -43,10 +43,11 @@ while True:
 
     # Save a frame at every quarter-second interval
     if frame_count % frame_interval == 0:
-        frame_name = os.path.join(frames_folder, f'frame_{saved_count:04d}.jpg')
+        # Get the current time in milliseconds
+        millis = int(time.time() * 1000)
+        frame_name = os.path.join(frames_folder, f'frame_{millis}.jpg')
         cv2.imwrite(frame_name, frame)
         print(f'Saved {frame_name}')
-        saved_count += 1
 
     frame_count += 1
 
