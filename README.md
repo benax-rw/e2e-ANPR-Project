@@ -41,12 +41,12 @@ python train.py --img 640 --batch 8 --epochs 10 --data dataset.yaml
 
 ## Perform the Inference: 
 ```bash
-python detect.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.5 --source data/videos/test1.mov
+python detect.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.5 --source data/videos/test1.mp4
 ```
 ## Talk to Arduino:
 Let the model tell the Arduino when it recognizes a car. The arduino will then be program to trigger a mechanism that opens the gate.
 ```bash
-python detect_and_talk_to_arduino.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.5 --source data/videos/test1.mov
+python detect_and_talk_to_arduino.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.5 --source data/videos/test1.mp4
 ```
 
 ## Usage
