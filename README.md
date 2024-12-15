@@ -36,7 +36,7 @@ The output of this stage is "e2e-ANPR-project/data_processing/dataset"
 ## Let the Training unfold!
 The following line will do the job!
 ```bash
-python train.py --img 640 --batch 8 --epochs 10 --data dataset.yaml
+python train.py --img 640 --batch 8 --epochs 10 --data ../dataset.yaml
 ```
 
 ## Perform the Inference: 
